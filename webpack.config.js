@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './react-app/index.tsx',
+    entry: './react-app/src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'react-bundle.js'

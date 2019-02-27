@@ -8,7 +8,7 @@ export class PathUtil {
     }
 
     public static staticResources(extension = ""){
-        return this.root("./../../electron/static/" + extension);
+        return this.root("./../../static-resources/" + extension);
     }
 
 }
