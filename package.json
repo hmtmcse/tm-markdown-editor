@@ -2,9 +2,10 @@
   "name": "tm-markdown-editor",
   "version": "1.0.0",
   "description": "TM Markdown Editor for Help people to document faster using Markdown Language",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "npm run build && electron ./dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/hmtmcse/tm-markdown-editor/issues"
   },
-  "homepage": "https://github.com/hmtmcse/tm-markdown-editor#readme"
+  "homepage": "https://github.com/hmtmcse/tm-markdown-editor#readme",
+  "dependencies": {
+    "electron": "^4.0.6"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
 }
