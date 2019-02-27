@@ -2,3 +2,4 @@
 *.iml
 ./dist
 *.lock
+/yarn-error.log
