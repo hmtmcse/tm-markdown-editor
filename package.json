@@ -1,0 +1,19 @@
+{
+  "name": "tm-markdown-editor",
+  "version": "1.0.0",
+  "description": "TM Markdown Editor for Help people to document faster using Markdown Language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmtmcse/tm-markdown-editor.git"
+  },
+  "author": "H.M.Touhid Mia",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/hmtmcse/tm-markdown-editor/issues"
+  },
+  "homepage": "https://github.com/hmtmcse/tm-markdown-editor#readme"
+}
