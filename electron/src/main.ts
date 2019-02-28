@@ -9,7 +9,7 @@ function createWindow() {
         width: 1366,
     });
     browserWindow.loadFile(PathUtil.staticResources("index.html"));
-    browserWindow.setMenu(null);
+    // browserWindow.setMenu(null);
     browserWindow.webContents.openDevTools();
 }
 
