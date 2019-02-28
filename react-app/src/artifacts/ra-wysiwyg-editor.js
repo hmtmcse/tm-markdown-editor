@@ -17,7 +17,6 @@ export default class RaWysiwygEditor extends Component {
 
 
     render() {
-        const {content, enablePaper, classes, titlePanel} = this.props;
         return (
             <React.Fragment>
                 <Editor
