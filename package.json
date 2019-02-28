@@ -2,11 +2,9 @@
   "name": "tm-markdown-editor",
   "version": "1.0.0",
   "description": "TM Markdown Editor for Help people to document faster using Markdown Language",
-  "main": "main.ts",
+  "main": "main.js",
   "scripts": {
     "build": "tsc",
-    "react": "webpack --progress --watch --mode development",
-    "bundle": "webpack",
     "start": "npm run build && electron ./dist/main.js"
   },
   "repository": {
@@ -19,19 +17,8 @@
     "url": "https://github.com/hmtmcse/tm-markdown-editor/issues"
   },
   "homepage": "https://github.com/hmtmcse/tm-markdown-editor#readme",
-  "dependencies": {
-    "electron": "^4.0.6"
-  },
   "devDependencies": {
-    "@types/jest": "24.0.9",
-    "@types/node": "11.9.5",
-    "@types/react": "16.8.5",
-    "@types/react-dom": "16.8.2",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
-    "typescript": "^3.3.3333",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "electron": "^4.0.6",
+    "typescript": "^3.3.3333"
   }
 }

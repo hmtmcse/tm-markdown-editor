@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from "electron";
-import {PathUtil} from "./utils/PathUtil";
+import {PathUtil} from "./utils/path-util";
 
 
 let browserWindow: Electron.BrowserWindow;
