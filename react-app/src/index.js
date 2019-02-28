@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RaWysiwygEditor from "./artifacts/ra-wysiwyg-editor";
 
-ReactDOM.render(<h1>Bismillah</h1>, document.getElementById('markdown-renderer'));
+
+ReactDOM.render(<RaWysiwygEditor/>, document.getElementById('markdown-renderer'));
