@@ -3,3 +3,5 @@
 ./dist
 *.lock
 /yarn-error.log
+/binary/win-unpacked
+/package-lock.json

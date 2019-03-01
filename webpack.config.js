@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
     entry: './react-app/src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'static/js'),
         filename: 'react-bundle.js'
     },
     module: {

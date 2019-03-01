@@ -4,10 +4,10 @@
   "description": "TM Markdown Editor for Help people to document faster using Markdown Language",
   "main": "main.js",
   "scripts": {
-    "build": "tsc",
     "bundle": "webpack",
-    "start": "npm run build && npm run bundle  && electron ./dist/main.js",
-    "react": "webpack --progress --watch --mode development"
+    "electron": "electron .",
+    "react": "webpack --progress --watch --mode development",
+    "binary": "electron-builder --win portable -c.extraMetadata=main.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/hmtmcse/tm-markdown-editor#readme",
   "devDependencies": {
+    "electron": "^4.0.6",
+    "electron-builder": "^20.38.5",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts": "2.1.5",
+    "simplemde": "^1.11.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
@@ -27,17 +33,21 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.0",
-    "draft-js": "^0.10.5",
-    "draftjs-to-markdown": "^0.5.1",
-    "electron": "^4.0.6",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-draft-wysiwyg": "^1.13.1",
-    "react-scripts": "2.1.5",
     "style-loader": "^0.23.1",
-    "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "yarn": "^1.13.0"
+  },
+  "build": {
+    "appId": "com.hmtmcse.tmmarkdowneditor",
+    "productName": "TM Markdown Editor",
+    "directories": {
+      "output": "binary"
+    },
+    "files": [
+      "static/**/*",
+      "main.js",
+      "index.html"
+    ]
   }
 }

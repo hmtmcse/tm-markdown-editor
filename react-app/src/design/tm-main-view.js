@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import RaWysiwygEditor from "../artifacts/ra-wysiwyg-editor";
 
 
 export default class TMMainView extends Component {
@@ -42,7 +41,7 @@ export default class TMMainView extends Component {
                             </div>
 
                             <div className="pane">
-                                <RaWysiwygEditor/>
+
 
 
                             </div>
