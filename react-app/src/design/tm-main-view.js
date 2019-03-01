@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import RaEditor from "../artifacts/ra-editor";
 
 
 export default class TMMainView extends Component {
@@ -9,7 +10,7 @@ export default class TMMainView extends Component {
                 <div className="window">
 
                     <header className="toolbar toolbar-header">
-                        <h1 className="title">Photon</h1>
+
                     </header>
 
                     <div className="window-content">
@@ -41,9 +42,7 @@ export default class TMMainView extends Component {
                             </div>
 
                             <div className="pane">
-
-
-
+                                <RaEditor/>
                             </div>
                         </div>
                     </div>
