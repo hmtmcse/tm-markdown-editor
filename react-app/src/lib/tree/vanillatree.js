@@ -46,8 +46,6 @@
         return $.extend(document.createElement(tagName), props);
     };
     var Tree = function (s, options) {
-        console.log(s);
-        console.log($(s)[0]);
         var _this = this,
             container = _this.container = $(s)[0],
             tree = _this.tree = container.appendChild(create('ul', {
@@ -62,6 +60,14 @@
                 _this.select(evt.target.parentNode.getAttribute('data-vtree-id'));
             } else if ($(evt.target).is('.vtree-toggle')) {
                 _this.toggle(evt.target.parentNode.getAttribute('data-vtree-id'));
+            }
+        });
+
+        tree.addEventListener('dblclick', function(evt){
+            if ($(evt.target).is('.vtree-leaf-label')) {
+                console.log(evt.target.parentNode.getAttribute('data-vtree-id'));
+            } else if ($(evt.target).is('.vtree-toggle')) {
+                console.log(evt.target.parentNode.getAttribute('data-vtree-id'));
             }
         });
 

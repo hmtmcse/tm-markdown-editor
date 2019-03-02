@@ -8,14 +8,26 @@ const ipcRenderer = window.require('electron').ipcRenderer;
 
 export default class TMMainView extends Component {
 
-    openProject(event){
-       let path = dialog.showOpenDialog(
-           { properties: ['openDirectory']},
-                function (filePaths) {
-                   let response = ipcRenderer.sendSync('listDirectory', filePaths[0]);
-                   console.log(response);
+    constructor(props) {
+        super(props);
+        this.state = {
+            directoryList: [],
+        };
+    }
+
+    openProject(event) {
+        let component = this;
+        dialog.showOpenDialog(
+            {properties: ['openDirectory']},
+            function (filePaths) {
+                if (filePaths !== undefined && filePaths.length) {
+                    let response = ipcRenderer.sendSync('listDirectory', filePaths[0]);
+                    if (response){
+                        component.setState({directoryList:response});
+                    }
                 }
-           )
+            }
+        )
     }
 
     render() {
@@ -32,8 +44,9 @@ export default class TMMainView extends Component {
 
                     <div className="window-content">
                         <div className="pane-group">
+
                             <div className="pane pane-sm sidebar">
-                                <RaTree/>
+                                <RaTree directoryList={this.state.directoryList}/>
                             </div>
 
                             <div className="pane">

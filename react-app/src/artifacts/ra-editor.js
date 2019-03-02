@@ -9,15 +9,17 @@ export default class RaEditor extends Component {
         this.raEditorTextArea = React.createRef();
     }
 
+    componentDidMount() {
+        new SimpleMDE({
+            element:this.raEditorTextArea.current,
+            spellChecker: false,
+        });
+    }
+
 
     render() {
         return(<div style={{height:"500px", width: "100%"}}>
-            <textarea ref={element => {
-                new SimpleMDE({
-                    element:element,
-                    spellChecker: false,
-                })
-            }}></textarea></div>
+            <textarea ref={this.raEditorTextArea}/></div>
         );
 
     }

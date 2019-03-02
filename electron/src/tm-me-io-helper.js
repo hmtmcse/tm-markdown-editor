@@ -4,18 +4,26 @@ const path = require('path');
 
 const TmMeIOHelper = {
 
-    listDirectory: (directoryPath) => {
+    listDirectory: (directoryPath, relativePath = '') => {
         let results = [];
+        let entityDetails = {};
+        let newRelativePath = '';
         let list = fs.readdirSync(directoryPath);
         list.forEach(function(fileOrDirName) {
-            console.log(fileOrDirName);
+            newRelativePath = relativePath + fileOrDirName;
+            entityDetails = {
+                'name': fileOrDirName,
+                'path': newRelativePath,
+                'isDirectory': false,
+                'subDirectories': [],
+            };
             let newPath = path.join(directoryPath, fileOrDirName);
             let stat = fs.statSync(newPath);
             if (stat && stat.isDirectory()) {
-                results = results.concat(TmMeIOHelper.listDirectory(newPath));
-            } else {
-                results.push(fileOrDirName);
+                entityDetails.isDirectory = true;
+                entityDetails.subDirectories = TmMeIOHelper.listDirectory(newPath, newRelativePath + '/');
             }
+            results.push(entityDetails);
         });
         return results;
     }
