@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import SimpleMDE from 'simplemde';
-import 'simplemde/dist/simplemde.min.css';
+import SimpleMDE from '../tm-markdown/simplemde';
+import '../tm-markdown/simplemde.css';
 
 export default class RaEditor extends Component {
 
