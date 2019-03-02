@@ -1221,7 +1221,7 @@ var toolbarBuiltInButtons = {
 		action: "https://simplemde.com/markdown-guide",
 		className: "fa fa-question-circle",
 		title: "Markdown Guide",
-		default: true
+		default: false
 	},
 	"separator-5": {
 		name: "separator-5"
