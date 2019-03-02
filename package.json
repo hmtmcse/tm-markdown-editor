@@ -50,6 +50,7 @@
     },
     "files": [
       "static/**/*",
+      "electron/**/*",
       "main.js",
       "index.html"
     ]

@@ -15,8 +15,6 @@ export default class RaTree extends Component {
         let component = this;
         if (component.tree && directoryList){
             directoryList.map(function (fileOrDir, key) {
-                console.log(fileOrDir);
-                console.log(component.tree);
                 component.tree.add({
                     label: fileOrDir.name,
                     parent: parent,
