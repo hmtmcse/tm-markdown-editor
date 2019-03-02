@@ -5,8 +5,8 @@ let browserWindow;
 function createWindow () {
     browserWindow = new BrowserWindow();
     browserWindow.maximize();
-    browserWindow.loadFile('index.html')
-    browserWindow.webContents.openDevTools()
+    browserWindow.loadFile('index.html');
+    // browserWindow.webContents.openDevTools();
     browserWindow.on('closed', () => {
         browserWindow = null
     });
