@@ -1,10 +1,12 @@
-const Fs = require('fs-plus');
+const fs = require('fs');
 
 export default class TMmeIOUtil {
 
     static test(){
-        let home = Fs.getHomeDirectory();
-        console.log(home);
+        fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+            if (err) throw err;
+            console.log('Saved!');
+        });
     }
 
 }

@@ -1,44 +1,27 @@
 import React, {Component} from 'react';
+import RaTree from "../artifacts/ra-tree";
 import RaEditor from "../artifacts/ra-editor";
+
 
 
 export default class TMMainView extends Component {
 
     render() {
+        // TMmeIOUtil.test();
         return (
             <React.Fragment>
                 <div className="window">
 
                     <header className="toolbar toolbar-header">
-
+                        <div className="toolbar-actions">
+                            <button className="btn btn-default"><span className="icon icon-folder icon-text"></span>Open</button>
+                        </div>
                     </header>
 
                     <div className="window-content">
                         <div className="pane-group">
                             <div className="pane pane-sm sidebar">
-                                <nav className="nav-group">
-                                    <h5 className="nav-group-title">Favorites</h5>
-                                    <span className="nav-group-item">
-                <span className="icon icon-home"></span>
-                connors
-              </span>
-                                    <span className="nav-group-item">
-                <span className="icon icon-folder"></span>
-                Documents
-              </span>
-                                    <span className="nav-group-item">
-                <span className="icon icon-window"></span>
-                Applications
-              </span>
-                                    <span className="nav-group-item">
-                <span className="icon icon-signal"></span>
-                AirDrop
-              </span>
-                                    <span className="nav-group-item">
-                <span className="icon icon-monitor"></span>
-                Desktop
-              </span>
-                                </nav>
+                                <RaTree/>
                             </div>
 
                             <div className="pane">
