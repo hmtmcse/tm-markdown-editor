@@ -3,6 +3,8 @@ import RaTree from "../artifacts/ra-tree";
 import RaEditor from "../artifacts/ra-editor";
 const { dialog } = window.require('electron').remote;
 const ipcRenderer = window.require('electron').ipcRenderer;
+import '../artifacts/loader.css';
+import RaLoader from "../artifacts/ra-loader";
 
 
 
@@ -31,20 +33,19 @@ export default class TMMainView extends Component {
     }
 
     render() {
-        // TMmeIOUtil.test();
         return (
             <React.Fragment>
                 <div className="window">
-
+                    <RaLoader/>
                     <header className="toolbar toolbar-header">
                         <div className="toolbar-actions">
                             <button className="btn btn-default" onClick={event => {this.openProject(event)}}><span className="icon icon-folder icon-text"></span>Open</button>
                         </div>
+
                     </header>
 
                     <div className="window-content">
                         <div className="pane-group">
-
                             <div className="pane pane-sm sidebar">
                                 <RaTree directoryList={this.state.directoryList}/>
                             </div>
