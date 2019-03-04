@@ -5,6 +5,7 @@ const { dialog } = window.require('electron').remote;
 const ipcRenderer = window.require('electron').ipcRenderer;
 import '../artifacts/loader.css';
 import RaLoader from "../artifacts/ra-loader";
+import JsTreeView from "../lib/js-tree-view/js-tree-view";
 
 
 
@@ -37,6 +38,9 @@ export default class TMMainView extends Component {
             <React.Fragment>
                 <div className="window">
                     <RaLoader/>
+                    <span ref={element =>{
+                        new JsTreeView(element);
+                    }}/>
                     <header className="toolbar toolbar-header">
                         <div className="toolbar-actions">
                             <button className="btn btn-default" onClick={event => {this.openProject(event)}}><span className="icon icon-folder icon-text"></span>Open</button>
@@ -49,7 +53,6 @@ export default class TMMainView extends Component {
                             <div className="pane pane-sm sidebar">
                                 <RaTree directoryList={this.state.directoryList}/>
                             </div>
-
                             <div className="pane">
                                 <RaEditor/>
                             </div>

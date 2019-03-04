@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from "prop-types";
 import VanillaTree from '../lib/tree/vanillatree';
 import '../lib/tree/image-css/vanillatree.css';
+import JsTreeView from "../lib/js-tree-view/js-tree-view";
 
 export default class RaTree extends Component {
 
